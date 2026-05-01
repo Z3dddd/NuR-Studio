@@ -167,18 +167,59 @@
 .portfolio-all-grid .gallery-img {
   position: absolute;
   inset: 0;
-  z-index: 2;
+  z-index: 1;
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-/* Template nomenclature hidden on full gallery; titles stay in .portfolio-overlay */
+/* Full gallery: show tile spec (PG-0x, paths, sizes) on top of renders for planning */
 .portfolio-all-grid .placeholder-label {
-  display: none;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 3;
+  text-align: center;
+  padding: 1.25rem;
+  box-sizing: border-box;
+  background: radial-gradient(
+    ellipse 78% 58% at 50% 50%,
+    rgba(10, 12, 16, 0.94) 0%,
+    rgba(10, 12, 16, 0.55) 52%,
+    transparent 74%
+  );
+}
+.portfolio-all-grid .placeholder-label strong {
+  color: rgba(255, 255, 255, 0.72);
+}
+.portfolio-all-grid .tile-ref {
+  color: rgba(230, 205, 150, 0.98);
+}
+.portfolio-all-grid .tile-preset {
+  color: rgba(255, 255, 255, 0.48);
+}
+.portfolio-all-grid .tile-preset span {
+  color: rgba(214, 186, 130, 0.75);
+}
+.portfolio-all-grid .tile-path {
+  display: block;
+  font-family: ui-monospace, "Cascadia Code", "Segoe UI Mono", monospace;
+  font-size: 0.5rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: rgba(180, 210, 230, 0.88);
+  margin-top: 0.4rem;
+  max-width: min(100%, 28rem);
+  line-height: 1.45;
+  word-break: break-word;
+  text-transform: none;
 }
 .portfolio-all-grid .portfolio-overlay {
-  z-index: 3;
+  z-index: 4;
 }
 .portfolio-all-grid .tile-nomenclature,
 .portfolio-grid .tile-nomenclature {
