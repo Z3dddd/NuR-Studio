@@ -218,6 +218,18 @@
 .portfolio-grid .tile-preset span {
   color: rgba(201, 169, 110, 0.35);
 }
+.portfolio-all-grid .tile-dim,
+.portfolio-grid .tile-dim {
+  display: block;
+  margin-top: 0.35rem;
+  font-family: ui-monospace, "Cascadia Code", "Segoe UI Mono", monospace;
+  font-size: 0.52rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  color: rgba(195, 215, 230, 0.78);
+  line-height: 1.4;
+}
 /* Tile shapes (12-column track) */
 .portfolio-all-grid .gallery-tile--banner {
   grid-column: span 12;
