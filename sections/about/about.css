@@ -1,0 +1,114 @@
+/* The studio — #about */
+#about {
+  background: var(--bg2);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  align-items: center;
+}
+.about-visual {
+  height: 600px;
+  background: var(--surface);
+  position: relative;
+  overflow: hidden;
+}
+.about-accent {
+  position: absolute;
+  bottom: -2rem; right: -2rem;
+  width: 200px; height: 200px;
+  border: 1px solid var(--gold-dim);
+  opacity: 0.4;
+}
+.about-accent2 {
+  position: absolute;
+  bottom: -3rem; right: -3rem;
+  width: 200px; height: 200px;
+  border: 1px solid var(--gold-dim);
+  opacity: 0.2;
+}
+.about-text p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+}
+.about-text p strong { color: var(--text); font-weight: 400; }
+.about-tags {
+  display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2rem;
+}
+.about-tag {
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold-dim);
+  padding: 0.4rem 1rem;
+}
+
+.about-placeholder-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-studio-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.about-placeholder-inner {
+  position: relative;
+  z-index: 0;
+  text-align: center;
+  padding: 2rem;
+}
+
+.about-tile-nomenclature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.22rem;
+  margin-bottom: 0.9rem;
+}
+.about-tile-ref {
+  font-family: ui-monospace, "Cascadia Code", "Segoe UI Mono", monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  color: rgba(201,169,110,0.8);
+}
+.about-tile-path {
+  font-size: 0.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+.about-visual.has-studio-image .about-placeholder-inner {
+  display: none;
+}
+
+.about-placeholder-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.about-placeholder-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  color: rgba(201,169,110,0.2);
+  font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+  #about { grid-template-columns: 1fr; gap: 4rem; }
+}

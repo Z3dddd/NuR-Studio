@@ -1,0 +1,174 @@
+<svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#0a0d12"/>
+          <stop offset="60%" stop-color="#12171f"/>
+          <stop offset="100%" stop-color="#1a1208"/>
+        </linearGradient>
+        <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#1a1510"/>
+          <stop offset="100%" stop-color="#0d0c0a"/>
+        </linearGradient>
+        <linearGradient id="bldGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#1e2530"/>
+          <stop offset="100%" stop-color="#141a22"/>
+        </linearGradient>
+        <linearGradient id="bldGrad2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#282016"/>
+          <stop offset="100%" stop-color="#181310"/>
+        </linearGradient>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="3" result="blur"/>
+          <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+        </filter>
+      </defs>
+      <!-- Sky -->
+      <rect width="1440" height="900" fill="url(#skyGrad)"/>
+      <!-- Moon/light source -->
+      <circle cx="1100" cy="120" r="60" fill="rgba(201,169,110,0.04)"/>
+      <circle cx="1100" cy="120" r="35" fill="rgba(201,169,110,0.06)"/>
+      <circle cx="1100" cy="120" r="18" fill="rgba(201,169,110,0.12)"/>
+      <!-- Stars -->
+      <circle cx="200" cy="80" r="1" fill="rgba(255,255,255,0.4)"/>
+      <circle cx="450" cy="50" r="1.2" fill="rgba(255,255,255,0.3)"/>
+      <circle cx="680" cy="90" r="0.8" fill="rgba(255,255,255,0.5)"/>
+      <circle cx="820" cy="40" r="1" fill="rgba(255,255,255,0.3)"/>
+      <circle cx="950" cy="70" r="0.8" fill="rgba(255,255,255,0.4)"/>
+      <circle cx="1240" cy="55" r="1.2" fill="rgba(255,255,255,0.3)"/>
+      <circle cx="1380" cy="95" r="0.8" fill="rgba(255,255,255,0.4)"/>
+      <circle cx="100" cy="160" r="0.8" fill="rgba(255,255,255,0.25)"/>
+      <circle cx="350" cy="140" r="0.6" fill="rgba(255,255,255,0.3)"/>
+      <!-- Ground -->
+      <rect x="0" y="640" width="1440" height="260" fill="url(#groundGrad)"/>
+      <!-- Reflection water-like ground -->
+      <rect x="0" y="650" width="1440" height="4" fill="rgba(201,169,110,0.03)"/>
+
+      <!-- Background building (far left) -->
+      <rect x="0" y="280" width="180" height="380" fill="#0e1218" opacity="0.7"/>
+      <rect x="20" y="300" width="140" height="4" fill="rgba(255,255,255,0.03)"/>
+      <!-- Windows BG left -->
+      <rect x="30" y="330" width="14" height="10" fill="rgba(201,169,110,0.08)"/>
+      <rect x="55" y="330" width="14" height="10" fill="rgba(201,169,110,0.05)"/>
+      <rect x="80" y="330" width="14" height="10" fill="rgba(201,169,110,0.08)"/>
+      <rect x="105" y="330" width="14" height="10" fill="rgba(201,169,110,0.04)"/>
+      <rect x="30" y="360" width="14" height="10" fill="rgba(201,169,110,0.06)"/>
+      <rect x="55" y="360" width="14" height="10" fill="rgba(201,169,110,0.08)"/>
+      <rect x="80" y="360" width="14" height="10" fill="rgba(201,169,110,0.04)"/>
+      <rect x="105" y="360" width="14" height="10" fill="rgba(201,169,110,0.07)"/>
+
+      <!-- Main tower (center-left) -->
+      <rect x="220" y="100" width="280" height="560" fill="url(#bldGrad)"/>
+      <!-- Facade lines -->
+      <rect x="220" y="100" width="2" height="560" fill="rgba(255,255,255,0.04)"/>
+      <rect x="498" y="100" width="2" height="560" fill="rgba(255,255,255,0.04)"/>
+      <!-- Horizontal bands -->
+      <rect x="220" y="180" width="280" height="1" fill="rgba(255,255,255,0.04)"/>
+      <rect x="220" y="260" width="280" height="1" fill="rgba(255,255,255,0.04)"/>
+      <rect x="220" y="340" width="280" height="1" fill="rgba(255,169,110,0.05)"/>
+      <rect x="220" y="420" width="280" height="1" fill="rgba(255,255,255,0.04)"/>
+      <rect x="220" y="500" width="280" height="1" fill="rgba(255,255,255,0.04)"/>
+      <!-- Windows main tower -->
+      <rect x="240" y="140" width="22" height="30" fill="rgba(201,169,110,0.12)"/>
+      <rect x="275" y="140" width="22" height="30" fill="rgba(201,169,110,0.06)"/>
+      <rect x="310" y="140" width="22" height="30" fill="rgba(201,169,110,0.15)"/>
+      <rect x="345" y="140" width="22" height="30" fill="rgba(201,169,110,0.08)"/>
+      <rect x="380" y="140" width="22" height="30" fill="rgba(201,169,110,0.12)"/>
+      <rect x="415" y="140" width="22" height="30" fill="rgba(201,169,110,0.05)"/>
+      <rect x="450" y="140" width="22" height="30" fill="rgba(201,169,110,0.10)"/>
+      <rect x="240" y="195" width="22" height="30" fill="rgba(201,169,110,0.07)"/>
+      <rect x="275" y="195" width="22" height="30" fill="rgba(201,169,110,0.14)"/>
+      <rect x="310" y="195" width="22" height="30" fill="rgba(201,169,110,0.06)"/>
+      <rect x="345" y="195" width="22" height="30" fill="rgba(201,169,110,0.12)"/>
+      <rect x="380" y="195" width="22" height="30" fill="rgba(201,169,110,0.09)"/>
+      <rect x="415" y="195" width="22" height="30" fill="rgba(201,169,110,0.15)"/>
+      <rect x="450" y="195" width="22" height="30" fill="rgba(201,169,110,0.07)"/>
+      <rect x="240" y="275" width="22" height="30" fill="rgba(201,169,110,0.10)"/>
+      <rect x="275" y="275" width="22" height="30" fill="rgba(201,169,110,0.06)"/>
+      <rect x="310" y="275" width="22" height="30" fill="rgba(201,169,110,0.14)"/>
+      <rect x="345" y="275" width="22" height="30" fill="rgba(201,169,110,0.08)"/>
+      <rect x="380" y="275" width="22" height="30" fill="rgba(201,169,110,0.12)"/>
+      <rect x="415" y="275" width="22" height="30" fill="rgba(201,169,110,0.06)"/>
+      <rect x="450" y="275" width="22" height="30" fill="rgba(201,169,110,0.11)"/>
+      <!-- Top crown -->
+      <polygon points="220,100 360,40 500,100" fill="#0e1520" opacity="0.9"/>
+      <line x1="360" y1="40" x2="360" y2="100" stroke="rgba(201,169,110,0.15)" stroke-width="1"/>
+      <!-- Antenna -->
+      <line x1="360" y1="0" x2="360" y2="40" stroke="rgba(201,169,110,0.2)" stroke-width="1.5"/>
+      <circle cx="360" cy="0" r="3" fill="rgba(201,169,110,0.6)"/>
+
+      <!-- Second major building (right of center) -->
+      <rect x="580" y="200" width="220" height="460" fill="url(#bldGrad2)"/>
+      <rect x="580" y="200" width="220" height="3" fill="rgba(201,169,110,0.1)"/>
+      <rect x="580" y="260" width="220" height="1" fill="rgba(255,255,255,0.04)"/>
+      <rect x="580" y="340" width="220" height="1" fill="rgba(255,255,255,0.03)"/>
+      <rect x="580" y="420" width="220" height="1" fill="rgba(255,255,255,0.04)"/>
+      <rect x="580" y="500" width="220" height="1" fill="rgba(255,255,255,0.03)"/>
+      <!-- Windows second building -->
+      <rect x="596" y="225" width="18" height="25" fill="rgba(201,169,110,0.14)"/>
+      <rect x="625" y="225" width="18" height="25" fill="rgba(201,169,110,0.07)"/>
+      <rect x="654" y="225" width="18" height="25" fill="rgba(201,169,110,0.12)"/>
+      <rect x="683" y="225" width="18" height="25" fill="rgba(201,169,110,0.05)"/>
+      <rect x="712" y="225" width="18" height="25" fill="rgba(201,169,110,0.10)"/>
+      <rect x="741" y="225" width="18" height="25" fill="rgba(201,169,110,0.14)"/>
+      <rect x="596" y="270" width="18" height="25" fill="rgba(201,169,110,0.06)"/>
+      <rect x="625" y="270" width="18" height="25" fill="rgba(201,169,110,0.12)"/>
+      <rect x="654" y="270" width="18" height="25" fill="rgba(201,169,110,0.08)"/>
+      <rect x="683" y="270" width="18" height="25" fill="rgba(201,169,110,0.15)"/>
+      <rect x="712" y="270" width="18" height="25" fill="rgba(201,169,110,0.06)"/>
+      <rect x="741" y="270" width="18" height="25" fill="rgba(201,169,110,0.10)"/>
+      <rect x="596" y="355" width="18" height="25" fill="rgba(201,169,110,0.12)"/>
+      <rect x="625" y="355" width="18" height="25" fill="rgba(201,169,110,0.05)"/>
+      <rect x="654" y="355" width="18" height="25" fill="rgba(201,169,110,0.14)"/>
+      <rect x="683" y="355" width="18" height="25" fill="rgba(201,169,110,0.08)"/>
+      <rect x="712" y="355" width="18" height="25" fill="rgba(201,169,110,0.12)"/>
+      <rect x="741" y="355" width="18" height="25" fill="rgba(201,169,110,0.05)"/>
+      <!-- Setback top -->
+      <rect x="610" y="160" width="160" height="40" fill="#141a22"/>
+      <rect x="630" y="140" width="120" height="20" fill="#0e1218"/>
+      <line x1="690" y1="100" x2="690" y2="140" stroke="rgba(201,169,110,0.15)" stroke-width="1"/>
+
+      <!-- Right tall building -->
+      <rect x="900" y="180" width="160" height="480" fill="#161c24" opacity="0.9"/>
+      <rect x="900" y="180" width="160" height="2" fill="rgba(201,169,110,0.08)"/>
+      <!-- Windows right -->
+      <rect x="915" y="210" width="14" height="20" fill="rgba(201,169,110,0.10)"/>
+      <rect x="940" y="210" width="14" height="20" fill="rgba(201,169,110,0.06)"/>
+      <rect x="965" y="210" width="14" height="20" fill="rgba(201,169,110,0.12)"/>
+      <rect x="990" y="210" width="14" height="20" fill="rgba(201,169,110,0.07)"/>
+      <rect x="1015" y="210" width="14" height="20" fill="rgba(201,169,110,0.10)"/>
+      <rect x="1040" y="210" width="14" height="20" fill="rgba(201,169,110,0.05)"/>
+      <rect x="915" y="250" width="14" height="20" fill="rgba(201,169,110,0.07)"/>
+      <rect x="940" y="250" width="14" height="20" fill="rgba(201,169,110,0.12)"/>
+      <rect x="965" y="250" width="14" height="20" fill="rgba(201,169,110,0.05)"/>
+      <rect x="990" y="250" width="14" height="20" fill="rgba(201,169,110,0.10)"/>
+      <rect x="1015" y="250" width="14" height="20" fill="rgba(201,169,110,0.08)"/>
+      <rect x="1040" y="250" width="14" height="20" fill="rgba(201,169,110,0.13)"/>
+      <!-- Spire right building -->
+      <polygon points="900,180 980,120 1060,180" fill="#0e1520" opacity="0.8"/>
+      <line x1="980" y1="80" x2="980" y2="120" stroke="rgba(201,169,110,0.18)" stroke-width="1.2"/>
+
+      <!-- Low building far right -->
+      <rect x="1100" y="420" width="340" height="240" fill="#14120e" opacity="0.8"/>
+      <rect x="1120" y="440" width="300" height="1" fill="rgba(201,169,110,0.06)"/>
+      <rect x="1120" y="480" width="300" height="1" fill="rgba(255,255,255,0.03)"/>
+
+      <!-- Ground-level details -->
+      <rect x="220" y="625" width="580" height="20" fill="#0e0d0b"/>
+      <rect x="0" y="640" width="1440" height="2" fill="rgba(201,169,110,0.06)"/>
+
+      <!-- Foreground trees (silhouettes) -->
+      <rect x="150" y="560" width="8" height="90" fill="#0a0908"/>
+      <ellipse cx="154" cy="545" rx="28" ry="35" fill="#0a0908"/>
+      <rect x="1280" y="570" width="8" height="80" fill="#0a0908"/>
+      <ellipse cx="1284" cy="555" rx="25" ry="30" fill="#0a0908"/>
+      <rect x="1320" y="580" width="6" height="70" fill="#0a0908"/>
+      <ellipse cx="1323" cy="567" rx="18" ry="22" fill="#0a0908"/>
+
+      <!-- Light glow on ground (from buildings) -->
+      <ellipse cx="360" cy="650" rx="200" ry="20" fill="rgba(201,169,110,0.04)"/>
+      <ellipse cx="690" cy="650" rx="160" ry="15" fill="rgba(201,169,110,0.03)"/>
+
+      <!-- Watermark / instruction text -->
+      <text x="720" y="780" text-anchor="middle" font-family="sans-serif" font-size="13" fill="rgba(255,255,255,0.15)" letter-spacing="3">YOUR ARCHITECTURAL RENDER GOES HERE</text>
+      <text x="720" y="800" text-anchor="middle" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.08)" letter-spacing="2">Replace the SVG placeholder in the HTML with your image file</text>
+    </svg>

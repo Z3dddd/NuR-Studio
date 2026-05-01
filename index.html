@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>FORMA — Architectural Rendering Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="main/main.css" />
+<link rel="stylesheet" href="cursor/cursor.css" />
+<link rel="stylesheet" href="sections/hero/hero.css" />
+<link rel="stylesheet" href="sections/services/services.css" />
+<link rel="stylesheet" href="sections/portfolio/portfolio.css" />
+<link rel="stylesheet" href="sections/process/process.css" />
+<link rel="stylesheet" href="sections/about/about.css" />
+<link rel="stylesheet" href="sections/testimonials/testimonials.css" />
+<link rel="stylesheet" href="sections/contact/contact.css" />
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="logo">
+    FORMA
+    <span>Architectural Rendering Studio</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#about">Studio</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Start a Project</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img src="assets/svg/hero-placeholder.svg" class="render-placeholder" alt="" />
+    <img src="assets/images/homepage/heros/hero-background/HeroSEC-01.jpg" data-src-base="assets/images/homepage/heros/hero-background/HeroSEC-01" data-missing="remove" class="hero-img-placeholder auto-ext-image" alt="HeroSEC-01 background render" loading="eager" />
+  </div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-title-block">
+      <p class="hero-eyebrow">Architectural Visualization Studio</p>
+      <h1 class="hero-title">
+        Where Vision<br>Becomes <em>Reality</em>
+      </h1>
+      <p class="hero-sub">We transform architectural concepts into breathtaking photorealistic renderings that sell projects before they're built.</p>
+      <div class="hero-cta-group">
+        <a href="#portfolio" class="btn-primary">View Our Work</a>
+        <a href="#contact" class="btn-ghost">Start a Project</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-stat">
+        <div class="num">200+</div>
+        <div class="label">Projects Delivered</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">98%</div>
+        <div class="label">Client Satisfaction</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">48h</div>
+        <div class="label">Turnaround Option</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <div class="marquee-group">
+      <span class="marquee-item">Aerial Views</span>
+      <span class="marquee-item">Exterior Renderings</span>
+      <span class="marquee-item">Interior Visualization</span>
+      <span class="marquee-item">3D Walkthroughs</span>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-eyebrow reveal">What We Offer</div>
+  <h2 class="section-title reveal reveal-delay-1">Rendering Services<br>Built for <em>Impact</em></h2>
+  <div class="divider reveal reveal-delay-2"></div>
+
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-num">01</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="12"/><polyline points="3 9 12 3 21 9"/><line x1="9" y1="21" x2="9" y2="15"/><line x1="15" y1="21" x2="15" y2="15"/></svg>
+      </div>
+      <h3 class="service-name">Exterior Rendering</h3>
+      <p class="service-desc">Photorealistic exterior visualizations that showcase your design in its full context — day, dusk, or night, with environment, landscaping, and atmosphere.</p>
+      <a href="#contact" class="service-link">Inquire →</a>
+    </div>
+    <div class="service-card reveal reveal-delay-1">
+      <div class="service-num">02</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><polyline points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+      </div>
+      <h3 class="service-name">Interior Visualization</h3>
+      <p class="service-desc">Immersive interior renders that bring spaces to life — capturing materials, light, mood, and spatial flow with stunning photographic quality.</p>
+      <a href="#contact" class="service-link">Inquire →</a>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <div class="service-num">03</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+      </div>
+      <h3 class="service-name">Architectural Animations</h3>
+      <p class="service-desc">Cinematic walkthroughs and fly-throughs that take clients on a journey through your design — perfect for presentations and marketing campaigns.</p>
+      <a href="#contact" class="service-link">Inquire →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="portfolio-header">
+    <div>
+      <div class="section-eyebrow reveal">Selected Work</div>
+      <h2 class="section-title reveal reveal-delay-1">Our <em>Portfolio</em></h2>
+    </div>
+    <a href="portfolio-all.html" class="btn-ghost reveal reveal-delay-2" id="view-all-projects">View All Projects</a>
+  </div>
+  <div class="portfolio-grid">
+    <div class="portfolio-item reveal">
+      <div class="portfolio-placeholder p1">
+        <img src="assets/images/homepage/home-portfolio/hpg-01.png" data-src-base="assets/images/homepage/home-portfolio/hpg-01" data-missing="remove" alt="HPG-01 — Skyline Residence" class="gallery-img auto-ext-image" loading="lazy" />
+        <div class="placeholder-label">
+          <div class="tile-nomenclature">
+            <span class="tile-ref">HPG-01</span>
+            <span class="tile-preset">size: <span>wide</span> · class <span>gallery-tile--wide</span></span>
+          </div>
+          <strong>Replace with your render</strong>
+          Skyline Residence
+        </div>
+      </div>
+      <div class="portfolio-overlay">
+        <div class="portfolio-info">
+          <h3>Skyline Residence</h3>
+          <p>Exterior · Residential</p>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-item reveal reveal-delay-1">
+      <div class="portfolio-placeholder p2">
+        <img src="assets/images/homepage/home-portfolio/hpg-02.png" data-src-base="assets/images/homepage/home-portfolio/hpg-02" data-missing="remove" alt="HPG-02 — The Commons" class="gallery-img auto-ext-image" loading="lazy" />
+        <div class="placeholder-label">
+          <div class="tile-nomenclature">
+            <span class="tile-ref">HPG-02</span>
+            <span class="tile-preset">size: <span>wide</span> · class <span>gallery-tile--wide</span></span>
+          </div>
+          <strong>Replace with your render</strong>
+          The Commons
+        </div>
+      </div>
+      <div class="portfolio-overlay">
+        <div class="portfolio-info">
+          <h3>The Commons</h3>
+          <p>Interior · Commercial</p>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-item reveal reveal-delay-2">
+      <div class="portfolio-placeholder p3">
+        <img src="assets/images/homepage/home-portfolio/hpg-03.png" data-src-base="assets/images/homepage/home-portfolio/hpg-03" data-missing="remove" alt="HPG-03 — Meridian Tower" class="gallery-img auto-ext-image" loading="lazy" />
+        <div class="placeholder-label">
+          <div class="tile-nomenclature">
+            <span class="tile-ref">HPG-03</span>
+            <span class="tile-preset">size: <span>tall</span> · class <span>gallery-tile--tall</span></span>
+          </div>
+          <strong>Replace with your render</strong>
+          Meridian Tower
+        </div>
+      </div>
+      <div class="portfolio-overlay">
+        <div class="portfolio-info">
+          <h3>Meridian Tower</h3>
+          <p>Exterior · Mixed-Use</p>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-item reveal reveal-delay-1">
+      <div class="portfolio-placeholder p4">
+        <img src="assets/images/homepage/home-portfolio/hpg-04.png" data-src-base="assets/images/homepage/home-portfolio/hpg-04" data-missing="remove" alt="HPG-04 — Harbour Lofts" class="gallery-img auto-ext-image" loading="lazy" />
+        <div class="placeholder-label">
+          <div class="tile-nomenclature">
+            <span class="tile-ref">HPG-04</span>
+            <span class="tile-preset">size: <span>med</span> · class <span>gallery-tile--med</span></span>
+          </div>
+          <strong>Replace with your render</strong>
+          Harbour Lofts
+        </div>
+      </div>
+      <div class="portfolio-overlay">
+        <div class="portfolio-info">
+          <h3>Harbour Lofts</h3>
+          <p>Interior · Residential</p>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-item reveal reveal-delay-2">
+      <div class="portfolio-placeholder p5">
+        <img src="assets/images/homepage/home-portfolio/hpg-05.png" data-src-base="assets/images/homepage/home-portfolio/hpg-05" data-missing="remove" alt="HPG-05 — Civic Pavilion" class="gallery-img auto-ext-image" loading="lazy" />
+        <div class="placeholder-label">
+          <div class="tile-nomenclature">
+            <span class="tile-ref">HPG-05</span>
+            <span class="tile-preset">size: <span>wide-sm</span> · class <span>gallery-tile--wide-sm</span></span>
+          </div>
+          <strong>Replace with your render</strong>
+          Civic Pavilion
+        </div>
+      </div>
+      <div class="portfolio-overlay">
+        <div class="portfolio-info">
+          <h3>Civic Pavilion</h3>
+          <p>Aerial · Institutional</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="section-eyebrow reveal">How We Work</div>
+  <h2 class="section-title reveal reveal-delay-1">A Process Built<br>for <em>Clarity</em></h2>
+  <div class="divider reveal reveal-delay-2"></div>
+
+  <div class="process-layout">
+    <div class="process-steps">
+      <div class="process-step active" data-step="0">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h3>Brief & Discovery</h3>
+          <p>We begin by deeply understanding your project — its architecture, mood, target audience, and vision. A detailed brief ensures every render is purposeful.</p>
+        </div>
+      </div>
+      <div class="process-step" data-step="1">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h3>Modelling & Composition</h3>
+          <p>We build or receive the 3D model, then carefully compose camera angles, lighting, and environmental context to maximize visual storytelling.</p>
+        </div>
+      </div>
+      <div class="process-step" data-step="2">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h3>Draft & Feedback</h3>
+          <p>You receive a grey-shaded draft for composition approval before we apply materials, lighting, and post-production — saving time and ensuring alignment.</p>
+        </div>
+      </div>
+      <div class="process-step" data-step="3">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <h3>Final Delivery</h3>
+          <p>High-resolution, print-ready renders are delivered in your preferred format with up to two rounds of revisions included in every project.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="process-visual reveal reveal-delay-2">
+      <div class="process-visual-inner">
+        <img src="assets/images/homepage/heros/how-we-work/hww-01.png" data-src-base="assets/images/homepage/heros/how-we-work/hww-01" data-missing="remove" class="process-floorplan auto-ext-image" alt="HWW-01 floor plan" loading="lazy" onload="this.closest('.process-visual-inner').classList.add('has-floorplan')" />
+        <img src="assets/svg/process-diagram.svg" class="process-diagram" alt="" />
+        <div class="process-tile-nomenclature">
+          <span class="process-tile-ref">HWW-01</span>
+          <span class="process-tile-path">assets/images/homepage/heros/how-we-work/hww-01.png</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-visual reveal">
+    <div class="about-placeholder-wrap">
+      <img src="assets/images/homepage/heros/studio/ts-01.png" data-src-base="assets/images/homepage/heros/studio/ts-01" data-missing="remove" class="about-studio-image auto-ext-image" alt="TS-01 studio section image" loading="lazy" onload="this.closest('.about-visual').classList.add('has-studio-image')" />
+      <div class="about-placeholder-inner">
+        <div class="about-tile-nomenclature">
+          <span class="about-tile-ref">TS-01</span>
+          <span class="about-tile-path">assets/images/homepage/heros/studio/ts-01.png</span>
+        </div>
+        <div class="about-placeholder-label">Replace with studio / team photo</div>
+        <div class="about-placeholder-title">Your Studio Image</div>
+      </div>
+    </div>
+    <div class="about-accent"></div>
+    <div class="about-accent2"></div>
+  </div>
+
+  <div class="about-text reveal reveal-delay-2">
+    <div class="section-eyebrow">The Studio</div>
+    <h2 class="section-title">Precision Craft.<br><em>Exceptional</em> Clarity.</h2>
+    <div class="divider"></div>
+    <p>FORMA is an architectural rendering studio dedicated to transforming design vision into <strong>compelling visual narratives</strong>. We believe great visualization is more than technical accuracy — it's storytelling.</p>
+    <p>Every project receives our full creative attention. We work closely with architects, developers, and interior designers to ensure each render not only looks stunning but <strong>communicates the soul of the design</strong>.</p>
+    <p>Based in [Your City], we serve clients globally with a commitment to quality, transparency, and on-time delivery.</p>
+    <div class="about-tags">
+      <span class="about-tag">3ds Max</span>
+      <span class="about-tag">V-Ray</span>
+      <span class="about-tag">Corona</span>
+      <span class="about-tag">Lumion</span>
+      <span class="about-tag">Photoshop</span>
+      <span class="about-tag">Unreal Engine</span>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-eyebrow reveal">Client Voices</div>
+  <h2 class="section-title reveal reveal-delay-1">What Our Clients <em>Say</em></h2>
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <p class="testimonial-text">The renders were so convincing, our clients approved the project on the first presentation. FORMA understands how to make architecture feel alive.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">A</div>
+        <div class="author-info">
+          <div class="name">Alex Morrison</div>
+          <div class="role">Principal Architect, Morrison & Co.</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-1">
+      <p class="testimonial-text">Exceptional attention to light and atmosphere. Our sales suite images drove a 40% uplift in off-plan enquiries compared to our previous renders.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">S</div>
+        <div class="author-info">
+          <div class="name">Sarah Chen</div>
+          <div class="role">Development Director, Pinnacle Group</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-2">
+      <p class="testimonial-text">Fast, professional, and the quality is outstanding. FORMA is now our go-to studio for every project. The process is smooth and the results speak for themselves.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">J</div>
+        <div class="author-info">
+          <div class="name">James Okafor</div>
+          <div class="role">Founder, Okafor Design Studio</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-eyebrow reveal">Get in Touch</div>
+  <h2 class="section-title reveal reveal-delay-1">Ready to Visualize<br>Your <em>Next Project?</em></h2>
+  <p class="contact-intro reveal reveal-delay-2">Tell us about your project and we'll come back to you within 24 hours with a tailored quote.</p>
+
+  <form class="contact-form reveal reveal-delay-2" onsubmit="handleSubmit(event)">
+    <div class="form-row">
+      <div class="form-field">
+        <input type="text" placeholder="Your Name" required />
+      </div>
+      <div class="form-field">
+        <input type="email" placeholder="Email Address" required />
+      </div>
+    </div>
+    <div class="form-field">
+      <select>
+        <option value="" disabled selected>Type of Rendering</option>
+        <option>Aerial Views</option>
+        <option>Exterior Rendering</option>
+        <option>Interior Visualization</option>
+        <option>Multiple / Other</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <textarea placeholder="Tell us about your project — type, scale, timeline, and any references…"></textarea>
+    </div>
+    <button type="submit" class="form-submit">Send Enquiry</button>
+  </form>
+  <div id="form-success">
+    Thank you — we'll be in touch within 24 hours.
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">FORMA</div>
+  <p class="footer-copy">© 2025 Forma Rendering Studio. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#about">Studio</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<script src="main/image-fallback.js"></script>
+<script src="main/main.js"></script>
+<script src="cursor/cursor.js"></script>
+<script src="sections/hero/hero.js"></script>
+<script src="sections/services/services.js"></script>
+<script src="sections/portfolio/portfolio.js"></script>
+<script src="sections/process/process.js"></script>
+<script src="sections/about/about.js"></script>
+<script src="sections/testimonials/testimonials.js"></script>
+<script src="sections/contact/contact.js"></script>
+</body>
+</html>
