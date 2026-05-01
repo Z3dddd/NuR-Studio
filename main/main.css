@@ -43,6 +43,10 @@ nav.scrolled {
   border-bottom: 1px solid var(--border-dim);
 }
 .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.6rem;
   font-weight: 300;
@@ -50,7 +54,23 @@ nav.scrolled {
   color: var(--gold);
   text-decoration: none;
 }
-.logo span { color: var(--text); opacity: 0.4; font-size: 0.6rem; letter-spacing: 0.15em; display: block; margin-top: -4px; font-family: 'Outfit', sans-serif; }
+.logo-img {
+  display: block;
+  height: 28px;
+  width: auto;
+  max-width: min(220px, 42vw);
+  object-fit: contain;
+  object-position: left center;
+}
+nav.scrolled .logo-img { height: 24px; }
+.logo span {
+  color: var(--text);
+  opacity: 0.4;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  font-family: 'Outfit', sans-serif;
+  line-height: 1.2;
+}
 .nav-links { display: flex; gap: 2.5rem; list-style: none; }
 .nav-links a {
   text-decoration: none;
@@ -132,11 +152,16 @@ footer {
   align-items: center;
 }
 .footer-logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.3rem;
-  font-weight: 300;
-  letter-spacing: 0.3em;
-  color: var(--gold);
+  margin: 0;
+  line-height: 0;
+}
+.footer-logo-img {
+  display: block;
+  height: 22px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  object-position: left center;
 }
 .footer-copy {
   font-size: 0.72rem;
@@ -186,5 +211,8 @@ footer {
   nav.scrolled { padding: 1rem 2rem; }
   section { padding: 6rem 2rem; }
   footer { flex-direction: column; gap: 1.5rem; text-align: center; }
+  .footer-logo-img { margin-inline: auto; }
+  .logo { align-items: center; text-align: center; }
+  .logo-img { max-width: min(200px, 55vw); }
   .nav-links { display: none; }
 }
