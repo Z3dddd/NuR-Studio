@@ -43,36 +43,33 @@ nav.scrolled {
   border-bottom: 1px solid var(--border-dim);
 }
 .logo {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.5rem;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.6rem;
-  font-weight: 300;
-  letter-spacing: 0.3em;
-  color: var(--gold);
+  gap: 0.3rem;
   text-decoration: none;
+  line-height: 1;
+  color: inherit;
 }
 .logo-img {
-  display: block;
-  height: clamp(56px, 7.5vw, 92px);
+  height: 2rem;
   width: auto;
-  max-width: min(560px, 94vw);
+  max-width: min(52vw, 220px);
+  display: block;
   object-fit: contain;
   object-position: left center;
 }
 nav.scrolled .logo-img {
-  height: clamp(46px, 6vw, 72px);
+  height: 1.75rem;
 }
-.logo span {
-  color: var(--text);
-  opacity: 0.55;
-  font-size: clamp(0.72rem, 1.45vw, 0.88rem);
-  letter-spacing: 0.18em;
+.logo-tagline {
   font-family: 'Outfit', sans-serif;
-  line-height: 1.25;
+  font-size: 0.6rem;
   font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text);
+  opacity: 0.45;
 }
 .nav-links { display: flex; gap: 2.5rem; list-style: none; }
 .nav-links a {
@@ -155,14 +152,13 @@ footer {
   align-items: center;
 }
 .footer-logo {
-  margin: 0;
-  line-height: 0;
+  display: flex;
+  align-items: center;
 }
 .footer-logo-img {
-  display: block;
-  height: clamp(32px, 4vw, 48px);
+  height: 1.65rem;
   width: auto;
-  max-width: min(400px, 85vw);
+  max-width: 200px;
   object-fit: contain;
   object-position: left center;
 }
@@ -214,8 +210,9 @@ footer {
   nav.scrolled { padding: 1rem 2rem; }
   section { padding: 6rem 2rem; }
   footer { flex-direction: column; gap: 1.5rem; text-align: center; }
-  .footer-logo-img { margin-inline: auto; }
-  .logo { align-items: center; text-align: center; }
-  .logo-img { max-width: min(480px, 92vw); }
+  .footer-logo { justify-content: center; }
+  .logo { align-items: center; }
+  .logo-img { object-position: center; }
+  .footer-logo-img { object-position: center; }
   .nav-links { display: none; }
 }
