@@ -51,6 +51,15 @@ nav.scrolled {
   line-height: 1;
   color: inherit;
 }
+/* PNG has opaque black instead of alpha — blend knocks black to page bg inside isolated box */
+.logo-mark {
+  display: inline-block;
+  line-height: 0;
+  isolation: isolate;
+  background: var(--bg);
+  padding: 0.12rem 0.32rem;
+  border-radius: 3px;
+}
 .logo-img {
   height: 2rem;
   width: auto;
@@ -58,6 +67,7 @@ nav.scrolled {
   display: block;
   object-fit: contain;
   object-position: left center;
+  mix-blend-mode: lighten;
 }
 nav.scrolled .logo-img {
   height: 1.75rem;
@@ -154,6 +164,11 @@ footer {
 .footer-logo {
   display: flex;
   align-items: center;
+  isolation: isolate;
+  background: var(--bg);
+  padding: 0.12rem 0.35rem;
+  border-radius: 3px;
+  line-height: 0;
 }
 .footer-logo-img {
   height: 1.65rem;
@@ -161,6 +176,7 @@ footer {
   max-width: 200px;
   object-fit: contain;
   object-position: left center;
+  mix-blend-mode: lighten;
 }
 .footer-copy {
   font-size: 0.72rem;
@@ -212,6 +228,7 @@ footer {
   footer { flex-direction: column; gap: 1.5rem; text-align: center; }
   .footer-logo { justify-content: center; }
   .logo { align-items: center; }
+  .logo-mark { text-align: center; }
   .logo-img { object-position: center; }
   .footer-logo-img { object-position: center; }
   .nav-links { display: none; }
