@@ -5,7 +5,6 @@
   window.__imageFallbackInitialized = true;
 
   const exts = ['.png', '.jpg', '.jpeg'];
-  const placeholderSvg = 'assets/svg/missing-image-placeholder.svg';
   const imgs = document.querySelectorAll('img[src*="assets/images/"], img[data-src-base]');
 
   imgs.forEach((img) => {
@@ -24,12 +23,7 @@
     const tryNext = () => {
       if (idx >= orderedExts.length) {
         img.onerror = null;
-        if (img.classList.contains('hero-img-placeholder')) {
-          img.remove();
-          return;
-        }
-        img.classList.add('is-missing-image-placeholder');
-        img.src = placeholderSvg;
+        img.remove();
         return;
       }
       img.src = `${base}${orderedExts[idx++]}`;

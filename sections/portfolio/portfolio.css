@@ -155,15 +155,22 @@
   position: relative;
   overflow: hidden;
   margin: 0;
-  cursor: default;
+  cursor: pointer;
 }
 .portfolio-all-grid .portfolio-placeholder {
   position: absolute;
   inset: 0;
   width: 100%;
   min-height: 0;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.6s ease;
 }
+.portfolio-all-grid .portfolio-item:hover .portfolio-placeholder {
+  transform: scale(1.04);
+}
+/* Same stacking as home #portfolio: image paints above label (text hidden when render exists) */
 .portfolio-all-grid .gallery-img {
   position: absolute;
   inset: 0;
@@ -173,7 +180,6 @@
   object-fit: cover;
   display: block;
 }
-/* Full gallery: show tile spec (PG-0x, paths, sizes) on top of renders for planning */
 .portfolio-all-grid .placeholder-label {
   position: absolute;
   inset: 0;
@@ -182,44 +188,7 @@
   align-items: center;
   justify-content: center;
   pointer-events: none;
-  z-index: 3;
-  text-align: center;
-  padding: 1.25rem;
-  box-sizing: border-box;
-  background: radial-gradient(
-    ellipse 78% 58% at 50% 50%,
-    rgba(10, 12, 16, 0.94) 0%,
-    rgba(10, 12, 16, 0.55) 52%,
-    transparent 74%
-  );
-}
-.portfolio-all-grid .placeholder-label strong {
-  color: rgba(255, 255, 255, 0.72);
-}
-.portfolio-all-grid .tile-ref {
-  color: rgba(230, 205, 150, 0.98);
-}
-.portfolio-all-grid .tile-preset {
-  color: rgba(255, 255, 255, 0.48);
-}
-.portfolio-all-grid .tile-preset span {
-  color: rgba(214, 186, 130, 0.75);
-}
-.portfolio-all-grid .tile-path {
-  display: block;
-  font-family: ui-monospace, "Cascadia Code", "Segoe UI Mono", monospace;
-  font-size: 0.5rem;
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  color: rgba(180, 210, 230, 0.88);
-  margin-top: 0.4rem;
-  max-width: min(100%, 28rem);
-  line-height: 1.45;
-  word-break: break-word;
-  text-transform: none;
-}
-.portfolio-all-grid .portfolio-overlay {
-  z-index: 4;
+  z-index: 0;
 }
 .portfolio-all-grid .tile-nomenclature,
 .portfolio-grid .tile-nomenclature {
