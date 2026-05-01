@@ -56,13 +56,13 @@ nav.scrolled {
 }
 .logo-img {
   display: block;
-  height: 28px;
+  height: 44px;
   width: auto;
-  max-width: min(220px, 42vw);
+  max-width: min(340px, 52vw);
   object-fit: contain;
   object-position: left center;
 }
-nav.scrolled .logo-img { height: 24px; }
+nav.scrolled .logo-img { height: 36px; }
 .logo span {
   color: var(--text);
   opacity: 0.4;
@@ -157,9 +157,9 @@ footer {
 }
 .footer-logo-img {
   display: block;
-  height: 22px;
+  height: 36px;
   width: auto;
-  max-width: 200px;
+  max-width: 300px;
   object-fit: contain;
   object-position: left center;
 }
@@ -213,6 +213,6 @@ footer {
   footer { flex-direction: column; gap: 1.5rem; text-align: center; }
   .footer-logo-img { margin-inline: auto; }
   .logo { align-items: center; text-align: center; }
-  .logo-img { max-width: min(200px, 55vw); }
+  .logo-img { max-width: min(300px, 70vw); }
   .nav-links { display: none; }
 }
