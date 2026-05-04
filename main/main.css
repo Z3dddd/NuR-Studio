@@ -73,7 +73,7 @@ nav.scrolled .logo-img {
 .nav-links { display: flex; gap: 2.5rem; list-style: none; }
 .nav-links a {
   text-decoration: none;
-  color: var(--muted);
+  color: #fff;
   font-size: 0.75rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -140,6 +140,20 @@ section { padding: 8rem 4rem; }
   transition: border-color 0.3s, color 0.3s, transform 0.2s;
 }
 .btn-ghost:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+/* Hero CTA: inverted from .btn-primary — black fill, gold label */
+.hero-cta-group .btn-ghost {
+  background: #000;
+  color: var(--gold);
+  border-color: var(--gold-dim);
+  transition: background 0.3s, color 0.3s, border-color 0.3s, transform 0.2s;
+}
+.hero-cta-group .btn-ghost:hover {
+  background: #141414;
+  color: var(--gold-light);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
 
 /* Footer */
 footer {
