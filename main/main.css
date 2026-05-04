@@ -32,12 +32,13 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 4rem;
+  gap: 2rem;
+  padding: 1.35rem 4rem;
   background: linear-gradient(to bottom, rgba(8,8,8,0.9) 0%, transparent 100%);
-  transition: padding 0.4s;
+  transition: padding 0.5s ease-out, background-color 0.5s ease-out, border-color 0.5s ease-out;
 }
 nav.scrolled {
-  padding: 1.2rem 4rem;
+  padding: 0.95rem 4rem;
   background: rgba(8,8,8,0.97);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-dim);
@@ -45,6 +46,7 @@ nav.scrolled {
 .logo {
   display: inline-flex;
   align-items: center;
+  margin-right: 0.75rem;
   text-decoration: none;
   line-height: 1;
   color: inherit;
@@ -54,17 +56,18 @@ nav.scrolled {
   line-height: 0;
 }
 .logo-img {
-  height: 2rem;
+  height: 3.4rem;
   width: auto;
-  max-width: min(52vw, 220px);
+  max-width: min(70vw, 374px);
   display: block;
   object-fit: contain;
   object-position: left center;
+  transition: height 0.5s ease-out, max-width 0.5s ease-out;
 }
 nav.scrolled .logo-img {
-  height: 1.75rem;
+  height: 3rem;
 }
-.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links { display: flex; gap: 2.15rem; list-style: none; }
 .nav-links a {
   text-decoration: none;
   color: #fff;
@@ -164,9 +167,9 @@ footer {
   line-height: 0;
 }
 .footer-logo-img {
-  height: 1.65rem;
+  height: 2.8rem;
   width: auto;
-  max-width: 200px;
+  max-width: 340px;
   object-fit: contain;
   object-position: left center;
 }
@@ -214,14 +217,15 @@ footer {
 .icon-building { }
 
 @media (max-width: 1024px) {
-  nav { padding: 1.5rem 2rem; }
-  nav.scrolled { padding: 1rem 2rem; }
+  nav { gap: 1rem; padding: 1rem 1.5rem; }
+  nav.scrolled { padding: 0.85rem 1.5rem; }
   section { padding: 6rem 2rem; }
   footer { flex-direction: column; gap: 1.5rem; text-align: center; }
   .footer-logo { justify-content: center; }
   .logo { align-items: center; }
   .logo-mark { text-align: center; }
-  .logo-img { object-position: center; }
+  .logo-img { height: 2.8rem; max-width: min(72vw, 310px); object-position: center; }
+  nav.scrolled .logo-img { height: 2.45rem; }
   .footer-logo-img { object-position: center; }
   .nav-links { display: none; }
 }
