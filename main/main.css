@@ -56,16 +56,16 @@ nav.scrolled {
   line-height: 0;
 }
 .logo-img {
-  height: 3.4rem;
+  height: 3.85rem;
   width: auto;
-  max-width: min(70vw, 374px);
+  max-width: min(72vw, 420px);
   display: block;
   object-fit: contain;
   object-position: left center;
   transition: height 0.5s ease-out, max-width 0.5s ease-out;
 }
 nav.scrolled .logo-img {
-  height: 3rem;
+  height: 3.4rem;
 }
 .nav-links { display: flex; gap: 2.15rem; list-style: none; }
 .nav-links a {
@@ -167,9 +167,9 @@ footer {
   line-height: 0;
 }
 .footer-logo-img {
-  height: 2.8rem;
+  height: 3.15rem;
   width: auto;
-  max-width: 340px;
+  max-width: 380px;
   object-fit: contain;
   object-position: left center;
 }
@@ -224,8 +224,8 @@ footer {
   .footer-logo { justify-content: center; }
   .logo { align-items: center; }
   .logo-mark { text-align: center; }
-  .logo-img { height: 2.8rem; max-width: min(72vw, 310px); object-position: center; }
-  nav.scrolled .logo-img { height: 2.45rem; }
+  .logo-img { height: 3.05rem; max-width: min(74vw, 335px); object-position: center; }
+  nav.scrolled .logo-img { height: 2.65rem; }
   .footer-logo-img { object-position: center; }
   .nav-links { display: none; }
 }
