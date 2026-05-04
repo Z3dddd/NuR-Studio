@@ -1,6 +1,9 @@
 (function () {
   const GRID_SELECTOR = '.portfolio-grid, .portfolio-all-grid';
-  const DEBUG_CLICK_MARKER = true;
+  // Must be `.portfolio-grid .portfolio-item` (comma binds looser than space — the old
+  // `.portfolio-grid, .portfolio-all-grid .portfolio-item` matched the grid div itself).
+  const PORTFOLIO_ITEM_SELECTOR = '.portfolio-grid .portfolio-item, .portfolio-all-grid .portfolio-item';
+  const DEBUG_CLICK_MARKER = false;
   let lb;
   let imgEl;
   let capEl;
@@ -14,7 +17,7 @@
   let debugMarker;
 
   function getNavigableItems() {
-    return Array.from(document.querySelectorAll(`${GRID_SELECTOR} .portfolio-item`)).filter(function (item) {
+    return Array.from(document.querySelectorAll(PORTFOLIO_ITEM_SELECTOR)).filter(function (item) {
       return Boolean(item.querySelector('img.gallery-img'));
     });
   }
@@ -182,21 +185,10 @@
     open(item);
   }
 
-  function bindTileEvents() {
-    const items = document.querySelectorAll(`${GRID_SELECTOR} .portfolio-item`);
-    items.forEach(function (item) {
-      item.addEventListener('click', function (e) {
-        openFromItem(item, e);
-      });
-    });
-  }
-
-  bindTileEvents();
-
-  // Delegated fallback in case tiles are replaced later.
   document.addEventListener('click', function (e) {
     if (e.target.closest('#portfolio-lightbox')) return;
-    const item = e.target.closest('.portfolio-item');
+    const item = e.target.closest(PORTFOLIO_ITEM_SELECTOR);
+    if (!item) return;
     openFromItem(item, e);
   });
 })();
