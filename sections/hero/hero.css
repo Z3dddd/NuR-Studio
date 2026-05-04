@@ -18,10 +18,11 @@
 .hero-img-placeholder {
   position: absolute;
   inset: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.7;
+  opacity: 1;
   transition: transform 8s ease;
 }
 .hero-img-placeholder.loaded { transform: scale(1.04); }
@@ -30,6 +31,7 @@
   width: 100%; height: 100%;
   position: absolute;
   inset: 0;
+  z-index: 0;
 }
 img.render-placeholder {
   object-fit: cover;
