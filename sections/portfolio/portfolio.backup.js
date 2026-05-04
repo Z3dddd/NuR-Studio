@@ -1,6 +1,5 @@
 (function () {
   const GRID_SELECTOR = '.portfolio-grid, .portfolio-all-grid';
-  const DEBUG_CLICK_MARKER = true;
   let lb;
   let imgEl;
   let capEl;
@@ -11,7 +10,6 @@
   let built;
   let currentIndex = -1;
   let navigableItems = [];
-  let debugMarker;
 
   function getNavigableItems() {
     return Array.from(document.querySelectorAll(`${GRID_SELECTOR} .portfolio-item`)).filter(function (item) {
@@ -60,34 +58,6 @@
       e.stopPropagation();
       goTo(currentIndex + 1);
     });
-  }
-
-  function showDebugMarker(message) {
-    if (!DEBUG_CLICK_MARKER) return;
-    if (!debugMarker) {
-      debugMarker = document.createElement('div');
-      debugMarker.id = 'portfolio-debug-marker';
-      debugMarker.style.position = 'fixed';
-      debugMarker.style.left = '12px';
-      debugMarker.style.bottom = '12px';
-      debugMarker.style.zIndex = '10002';
-      debugMarker.style.padding = '8px 12px';
-      debugMarker.style.border = '1px solid rgba(201, 169, 110, 0.45)';
-      debugMarker.style.background = 'rgba(10, 10, 10, 0.9)';
-      debugMarker.style.color = '#e8d5b0';
-      debugMarker.style.fontSize = '11px';
-      debugMarker.style.fontFamily = 'Outfit, sans-serif';
-      debugMarker.style.letterSpacing = '0.08em';
-      debugMarker.style.textTransform = 'uppercase';
-      debugMarker.style.pointerEvents = 'none';
-      document.body.appendChild(debugMarker);
-    }
-    debugMarker.textContent = message;
-    debugMarker.style.display = 'block';
-    window.clearTimeout(showDebugMarker._t);
-    showDebugMarker._t = window.setTimeout(function () {
-      if (debugMarker) debugMarker.style.display = 'none';
-    }, 1800);
   }
 
   function onKeydown(e) {
@@ -178,7 +148,6 @@
     if (!item || !item.closest(GRID_SELECTOR)) return;
     if (!item.querySelector('img.gallery-img')) return;
     e.preventDefault();
-    showDebugMarker('Portfolio click detected');
     open(item);
   }
 
