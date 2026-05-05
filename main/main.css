@@ -34,14 +34,30 @@ nav {
   justify-content: space-between;
   gap: 2rem;
   padding: 1.35rem 4rem;
+  isolation: isolate;
   background: linear-gradient(to bottom, rgba(8,8,8,0.9) 0%, transparent 100%);
-  transition: padding 0.5s ease-out, background-color 0.5s ease-out, border-color 0.5s ease-out;
 }
-nav.scrolled {
-  padding: 0.95rem 4rem;
-  background: rgba(8,8,8,0.97);
+/* Fades in on scroll (opacity interpolates; swapping background types does not) */
+nav::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: rgba(8,8,8,0.94);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-dim);
+  border-bottom: 1px solid transparent;
+  opacity: 0;
+  transition: opacity 0.78s ease-in-out, border-color 0.78s ease-in-out;
+  pointer-events: none;
+}
+nav.scrolled::before {
+  opacity: 1;
+  border-bottom-color: var(--border-dim);
+}
+nav > * {
+  position: relative;
+  z-index: 1;
 }
 .logo {
   display: inline-flex;
@@ -62,10 +78,6 @@ nav.scrolled {
   display: block;
   object-fit: contain;
   object-position: left center;
-  transition: height 0.5s ease-out, max-width 0.5s ease-out;
-}
-nav.scrolled .logo-img {
-  height: 3.4rem;
 }
 .nav-links { display: flex; gap: 2.15rem; list-style: none; }
 .nav-links a {
@@ -218,14 +230,13 @@ footer {
 
 @media (max-width: 1024px) {
   nav { gap: 1rem; padding: 1rem 1.5rem; }
-  nav.scrolled { padding: 0.85rem 1.5rem; }
+  nav.scrolled { padding: 1rem 1.5rem; }
   section { padding: 6rem 2rem; }
   footer { flex-direction: column; gap: 1.5rem; text-align: center; }
   .footer-logo { justify-content: center; }
   .logo { align-items: center; }
   .logo-mark { text-align: center; }
   .logo-img { height: 3.05rem; max-width: min(74vw, 335px); object-position: center; }
-  nav.scrolled .logo-img { height: 2.65rem; }
   .footer-logo-img { object-position: center; }
   .nav-links { display: none; }
 }

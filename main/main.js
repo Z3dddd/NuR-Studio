@@ -14,9 +14,31 @@
   );
 })();
 
-// Navbar scroll
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); });
+// Navbar scroll (rAF + hysteresis so the bar doesn’t flicker at the threshold)
+(function () {
+  const navbar = document.getElementById('navbar');
+  if (!navbar) return;
+  const ON = 88;
+  const OFF = 18;
+  let ticking = false;
+  function update() {
+    const y = window.scrollY || 0;
+    if (navbar.classList.contains('scrolled')) {
+      if (y < OFF) navbar.classList.remove('scrolled');
+    } else {
+      if (y > ON) navbar.classList.add('scrolled');
+    }
+    ticking = false;
+  }
+  function onScroll() {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  update();
+})();
 
 // Reveal on scroll
 const reveals = document.querySelectorAll('.reveal');
