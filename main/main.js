@@ -99,4 +99,13 @@ reveals.forEach(el => observer.observe(el));
   window.addEventListener('resize', () => {
     if (window.innerWidth > 1024) closeMenu();
   });
+
+  // Auto-close menu when user scrolls.
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (navbar.classList.contains('nav-open')) closeMenu();
+    },
+    { passive: true }
+  );
 })();

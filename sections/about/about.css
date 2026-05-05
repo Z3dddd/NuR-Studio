@@ -111,4 +111,6 @@
 
 @media (max-width: 1024px) {
   #about { grid-template-columns: 1fr; gap: 4rem; }
+  .about-text { order: 1; }
+  .about-visual { order: 2; }
 }

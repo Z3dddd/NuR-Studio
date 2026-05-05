@@ -4,18 +4,6 @@
   position: relative;
   overflow: hidden;
 }
-#services::before {
-  content: 'SERVICES';
-  position: absolute;
-  right: -2rem;
-  top: 4rem;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 10rem;
-  color: rgba(255,255,255,0.015);
-  letter-spacing: 0.1em;
-  pointer-events: none;
-  white-space: nowrap;
-}
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -45,7 +33,7 @@
 .service-num {
   font-family: 'Cormorant Garamond', serif;
   font-size: 3.5rem;
-  color: rgba(201,169,110,0.12);
+  color: rgba(170, 142, 96, 0.52);
   line-height: 1;
   margin-bottom: 1.5rem;
   font-weight: 300;
@@ -88,5 +76,12 @@
   /* Three cards: avoid a lone empty grid cell (grey patch) on row 2 */
   .service-card:nth-child(3) {
     grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .service-card:nth-child(3) {
+    grid-column: auto;
   }
 }

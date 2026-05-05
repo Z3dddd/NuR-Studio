@@ -170,5 +170,17 @@ img.render-placeholder {
 @media (max-width: 640px) {
   .hero-content { padding: 0 1.25rem 4.5rem; }
   .scroll-indicator { bottom: 1.75rem; }
-  .hero-cta-group { flex-direction: column; align-items: flex-start; gap: 0.9rem; }
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.9rem;
+    width: min(100%, 250px);
+  }
+  .hero-cta-group .btn-primary,
+  .hero-cta-group .btn-ghost {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+  }
 }

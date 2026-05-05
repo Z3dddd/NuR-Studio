@@ -57,3 +57,7 @@
 @media (max-width: 1024px) {
   .testimonials-grid { grid-template-columns: 1fr 1fr; }
 }
+
+@media (max-width: 640px) {
+  .testimonials-grid { grid-template-columns: 1fr; }
+}
