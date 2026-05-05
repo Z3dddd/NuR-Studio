@@ -12,9 +12,14 @@
   --muted: #7a7670;
   --border: rgba(201,169,110,0.15);
   --border-dim: rgba(255,255,255,0.06);
+  --nav-offset: 96px;
 }
 
 html { scroll-behavior: smooth; }
+html { scroll-padding-top: var(--nav-offset); }
+
+/* When navigating via #anchors, the fixed navbar should not cover content. */
+section[id] { scroll-margin-top: var(--nav-offset); }
 
 body {
   background: var(--bg);
@@ -89,6 +94,47 @@ nav > * {
   transition: color 0.3s;
 }
 .nav-links a:hover { color: var(--gold); }
+
+.nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(201,169,110,0.22);
+  background: rgba(8,8,8,0.65);
+  color: var(--text);
+  align-items: center;
+  justify-content: center;
+}
+.nav-toggle:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.nav-toggle__icon {
+  width: 18px;
+  height: 2px;
+  background: rgba(232,228,220,0.95);
+  border-radius: 999px;
+  position: relative;
+}
+.nav-toggle__icon::before,
+.nav-toggle__icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(232,228,220,0.95);
+}
+.nav-toggle__icon::before { top: -6px; }
+.nav-toggle__icon::after { top: 6px; }
+
+/* Mobile menu open state */
+nav.nav-open .nav-toggle__icon { background: transparent; }
+nav.nav-open .nav-toggle__icon::before { top: 0; transform: rotate(45deg); }
+nav.nav-open .nav-toggle__icon::after { top: 0; transform: rotate(-45deg); }
 .nav-cta {
   font-size: 0.72rem;
   letter-spacing: 0.15em;
@@ -229,8 +275,8 @@ footer {
 .icon-building { }
 
 @media (max-width: 1024px) {
-  nav { gap: 1rem; padding: 1rem 1.5rem; }
-  nav.scrolled { padding: 1rem 1.5rem; }
+  nav { gap: 1rem; padding: 1rem 1.25rem; }
+  nav.scrolled { padding: 1rem 1.25rem; }
   section { padding: 6rem 2rem; }
   footer { flex-direction: column; gap: 1.5rem; text-align: center; }
   .footer-logo { justify-content: center; }
@@ -238,5 +284,34 @@ footer {
   .logo-mark { text-align: center; }
   .logo-img { height: 3.05rem; max-width: min(74vw, 335px); object-position: center; }
   .footer-logo-img { object-position: center; }
-  .nav-links { display: none; }
+  .nav-toggle { display: inline-flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 1rem;
+    right: 1rem;
+    padding: 1rem 0;
+    margin: 0;
+    flex-direction: column;
+    gap: 0.75rem;
+    background: rgba(8,8,8,0.93);
+    border: 1px solid var(--border-dim);
+    border-top: none;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+  nav.nav-open .nav-links { display: flex; }
+}
+
+@media (max-width: 640px) {
+  nav { padding: 0.85rem 1rem; }
+  section { padding: 5.25rem 1.25rem; }
+  footer { padding: 2.5rem 1.25rem; }
+
+  .btn-primary,
+  .btn-ghost {
+    padding: 0.9rem 1.6rem;
+    font-size: 0.72rem;
+  }
 }

@@ -24,3 +24,12 @@ body {
   transition: transform 0.08s linear, width 0.3s, height 0.3s;
 }
 body:hover .cursor { opacity: 1; }
+
+/* On touch devices (coarse pointers), don't hide the real cursor. */
+@media (pointer: coarse), (hover: none) {
+  body { cursor: auto; }
+  .cursor,
+  .cursor-ring {
+    display: none;
+  }
+}

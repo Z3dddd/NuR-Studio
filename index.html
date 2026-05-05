@@ -35,12 +35,25 @@
       <img src="assets/logo/nur-studio-logo.png" alt="NŪR STUDIO logo" class="logo-img" width="220" height="64" />
     </span>
   </a>
-  <ul class="nav-links">
+
+  <button
+    id="navToggle"
+    class="nav-toggle"
+    type="button"
+    aria-label="Open menu"
+    aria-controls="navMenu"
+    aria-expanded="false"
+  >
+    <span class="nav-toggle__icon" aria-hidden="true"></span>
+  </button>
+
+  <ul id="navMenu" class="nav-links" aria-label="Primary navigation">
     <li><a href="#services">Services</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#process">Process</a></li>
     <li><a href="#about">Studio</a></li>
   </ul>
+
   <a href="#contact" class="nav-cta">Start a Project</a>
 </nav>
 
@@ -48,7 +61,7 @@
 <section class="hero" id="home">
   <div class="hero-bg">
     <img src="assets/svg/hero-placeholder.svg" class="render-placeholder" alt="" />
-    <img src="assets/images/homepage/heros/hero-background/HeroSEC-01.png" data-src-base="assets/images/homepage/heros/hero-background/HeroSEC-01" data-missing="remove" class="hero-img-placeholder auto-ext-image" alt="HeroSEC-01 background render" loading="eager" onload="this.classList.add('loaded'); var p=this.previousElementSibling; if (p &amp;&amp; p.classList.contains('render-placeholder')) p.setAttribute('hidden','')" />
+    <img src="assets/images/homepage/heros/hero-background/HeroSEC-01.png" data-src-base="assets/images/homepage/heros/hero-background/HeroSEC-01" data-missing="remove" class="hero-img-placeholder auto-ext-image" alt="HeroSEC-01 background render" loading="eager" onload="this.classList.add('loaded'); var p=this.previousElementSibling; if (p && p.classList.contains('render-placeholder')) p.setAttribute('hidden','');" />
   </div>
   <div class="hero-overlay"></div>
 

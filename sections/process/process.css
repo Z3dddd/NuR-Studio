@@ -126,4 +126,6 @@
 
 @media (max-width: 1024px) {
   .process-layout { grid-template-columns: 1fr; gap: 4rem; }
+  /* Sticky visuals are less reliable on phones; keep it in normal flow. */
+  .process-visual { position: relative; top: auto; transform: none; height: 320px; }
 }
