@@ -278,17 +278,19 @@
 }
 @media (max-width: 1024px) {
   .portfolio-all-page { padding: 6rem 2rem 3rem; }
+  /* One column on phone/tablet so every tile is the same width as the content area. */
+  .portfolio-all-grid {
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+  }
+  .portfolio-all-grid .portfolio-item {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 100%;
+    justify-self: stretch;
+  }
 }
 @media (max-width: 640px) {
-  .portfolio-all-grid .gallery-tile--banner,
-  .portfolio-all-grid .gallery-tile--wide,
-  .portfolio-all-grid .gallery-tile--wide-sm,
-  .portfolio-all-grid .gallery-tile--med,
-  .portfolio-all-grid .gallery-tile--square,
-  .portfolio-all-grid .gallery-tile--tall,
-  .portfolio-all-grid .gallery-tile--tall-wide {
-    grid-column: span 12;
-  }
   .portfolio-all-grid .gallery-tile--banner { aspect-ratio: 16 / 10; }
   .portfolio-all-grid .gallery-tile--wide-sm,
   .portfolio-all-grid .gallery-tile--med { aspect-ratio: 4 / 3; }

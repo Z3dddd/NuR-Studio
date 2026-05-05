@@ -87,19 +87,19 @@ nav > * {
 .nav-links { display: flex; gap: 2.15rem; list-style: none; }
 .nav-links a {
   text-decoration: none;
-  color: #fff;
-  font-size: 0.75rem;
-  letter-spacing: 0.18em;
+  color: rgba(201, 169, 110, 0.95);
+  font-size: 0.72rem;
+  letter-spacing: 0.17em;
   text-transform: uppercase;
   transition: color 0.3s;
 }
-.nav-links a:hover { color: var(--gold); }
+.nav-links a:hover { color: var(--gold-light); }
 
 .nav-toggle {
   display: none;
   width: 44px;
   height: 44px;
-  border-radius: 12px;
+  border-radius: 0;
   border: 1px solid rgba(201,169,110,0.22);
   background: rgba(8,8,8,0.65);
   color: var(--text);
@@ -301,7 +301,7 @@ footer {
     text-align: right;
     background: rgba(8, 8, 8, 0.38);
     border: 1px solid rgba(201, 169, 110, 0.24);
-    border-radius: 10px;
+    border-radius: 0;
     box-shadow: 0 12px 34px rgba(0, 0, 0, 0.35);
     -webkit-backdrop-filter: blur(6px) saturate(106%);
     backdrop-filter: blur(6px) saturate(106%);
@@ -325,7 +325,9 @@ footer {
 }
 
 @media (max-width: 640px) {
-  nav { padding: 0.85rem 1rem; }
+  /* Keep bar height identical when .scrolled kicks in (scrolled rule in 1024px block had higher specificity). */
+  nav,
+  nav.scrolled { padding: 0.85rem 1rem; }
   section { padding: 5.25rem 1.25rem; }
   footer { padding: 2.5rem 1.25rem; }
 
